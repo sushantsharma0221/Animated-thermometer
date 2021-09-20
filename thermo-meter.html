@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>thermo-meter
+    </title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@200&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+        }
+.outer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    width:100vw;
+    background-color: rgb(144, 77, 199);
+    font-family: Urbanist ;
+    color:whitesmoke;
+}
+span{
+    height:100px;
+    width:50px;
+}
+h1{
+    font-size: 50px ;
+}
+</style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+            <h1>
+                Animated
+                Thermo-Meter :<span id="temp" class=" fa fa-3x"></span>
+            </h1>
+        </div>
+    </div>
+    <script>
+
+const tempLoad=()=>{
+let temp=document.getElementById('temp');
+temp.innerHTML="&#xf2cb";
+setTimeout(()=>{temp.innerHTML="&#xf2ca";
+temp.style.color='yellow';},1000);
+setTimeout(()=>{temp.innerHTML="&#xf2c9";},2000);
+setTimeout(()=>{temp.innerHTML="&#xf2c8"
+temp.style.color='red';},3000);
+ }
+      tempLoad();
+      setInterval(tempLoad, 4000);
+     
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
